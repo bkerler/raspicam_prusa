@@ -1,0 +1,12 @@
+[Unit]
+Description=Raspicam Service
+After=network.target
+
+[Service]
+Type=simple
+# Replace /home/pi with your user path
+ExecStart=/home/pi/raspicam_prusa/raspicam_prusa.py
+Restart=always
+
+[Install]
+WantedBy=default.target
