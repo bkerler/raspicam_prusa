@@ -21,6 +21,7 @@ Use the raspberry pi zero w2 together with a raspi camera for PrusaConnect
 - Allow camera connection in browser
 - On firefox, press ctrl-shift-i to get the developer menu, click on "Network". Now press "START CAMERA" 
 - You should see a request with status "204", click on it. On the "Request Headers" Tab, you should see at the very end the "fingerprint" value, note this down as well
+- Make sure to stop the camera
 
 # Installation
 - ssh to your raspberry pi: "ssh pi@raspicam", enter your password if asked
@@ -39,6 +40,6 @@ Use the raspberry pi zero w2 together with a raspi camera for PrusaConnect
 - "sudo systemctl enable raspicam"
 - "sudo systemctl start raspicam"
 - "sudo systemctl status raspicam"
-- If you see no error, all is good and you should start to see pictures after a few seconds on prusa connect
+- If you see no error, all is good and you should start to see pictures after a few seconds (every 5 seconds) on prusa connect
 
 
