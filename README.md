@@ -1,13 +1,15 @@
 # raspicam_prusa
-Use the raspberry pi zero w2 together with a raspi camera for PrusaConnect
+Use the raspberry pi zero 2 W (or any raspberry) together with a raspi camera for PrusaConnect
 
-# Get raspberry pi
+# Install raspberry pi to raspberry pi zero 2 w
 - Install rpi_imager
-- "Choose OS" -> Raspberry Pi for your Pi
-- "Advanced options" -> "Set hostname" -> "raspicam"
-- "Enable SSH" -> "Use password authentication"
-- "Set username and password" -> "Username": "pi", "Password" : [your password here]
-- "Configure wireless LAN" -> Your wifi settings here, make sure to select right country
+- "Choose device" -> Raspberry Pi Zero 2 W for your Pi
+- "Choose os" -> Raspberry Pi OS (Legacy, 32-bit)
+- "Choose storage" -> select your sd-card -> Next
+- Set a check at "Set hostname" -> "raspicam"
+- Set a check at "Enable SSH" -> "Use password authentication"
+- Set a check at "Set username and password" -> "Username": "pi", "Password" : [your password here]
+- Set a check at "Configure wireless LAN" -> Your wifi settings here, make sure to select right country
 - "Save"
 - "Choose storage" : Select your sd card, then write
 - Insert the written sdcard to your rpi zero w2
