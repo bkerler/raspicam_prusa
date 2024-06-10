@@ -10,8 +10,8 @@ picturedir = os.path.join("/","tmp","images")
 if not os.path.exists(picturedir):
    os.mkdir(picturedir)
 
-token = os.getent(RASPICAM_TOKEN, 'default_token')
-fingerprint = os.getent(RASPICAM_FP, 'default_fingerprint')
+token = os.getenv('RASPICAM_TOKEN', 'default_token')
+fingerprint = os.getenv('RASPICAM_FP', 'default_fingerprint')
 
 if (token == 'default_token') or (fingerprint == 'default_fingerprint'):
     print('You have to set correct token and fingerprint in service file', file=sys.stderr)
