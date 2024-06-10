@@ -4,6 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
+# Replace with your Token
+Environment="RASPICAM_TOKEN=iVhmFoIckhatPPLNITES"
+# Replace with your fingerprint
+Environment="RASPICAM_FP=a2c7ae22a0636faa76063e81a6addaf20a7a2afc"
 # Replace /home/pi with your user path
 ExecStart=/home/pi/raspicam_prusa/raspicam_prusa.py
 Restart=always
