@@ -3,11 +3,19 @@ import base64
 import requests
 import subprocess
 import os
+import sys
 import time
 
 picturedir = os.path.join("/","tmp","images")
 if not os.path.exists(picturedir):
    os.mkdir(picturedir)
+
+token = os.getenv('RASPICAM_TOKEN', 'default_token')
+fingerprint = os.getenv('RASPICAM_FP', 'default_fingerprint')
+
+if (token == 'default_token') or (fingerprint == 'default_fingerprint'):
+    print('You have to set correct token and fingerprint in service file', file=sys.stderr)
+    sys.exit(1)
 
 def atob(base64_string):
     return base64.b64decode(base64_string)
@@ -36,8 +44,8 @@ def main():
       url = "https://webcam.connect.prusa3d.com/c/snapshot"
       headers = {
                 "content-type": "image/jpg",
-                "fingerprint": "a2c7ae22a0636faa76063e81a6addaf20a7a2afc",    # replace with your fingerprint
-                "token": "iVhmFoIckhatPPLNITES",                              # replace with your token
+                "fingerprint": fingerprint,
+                "token": token
             }
 
       response = requests.put(url, headers=headers, data=bytearray(snapshot))
